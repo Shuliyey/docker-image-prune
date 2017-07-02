@@ -1,4 +1,5 @@
 # docker-image-prune
+cleans up dangling docker images
 
 # bash
 ```bash
