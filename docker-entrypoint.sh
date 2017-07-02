@@ -24,7 +24,7 @@ function output()
   echo "$@"
 }
 
-# Logrotate status file handling
+# cron internal schedule
 croninterval="0 0 0 * * *"
 
 if [ -n "${CRONSCHEDULE}" ]; then
