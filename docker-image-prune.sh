@@ -9,7 +9,7 @@ for id in ${image_ids[@]};
 do
   exited_containers=$(docker ps --filter status=exited --filter ancestor=${id} -q);
   running_containers=$(docker ps --filter status=running --filter ancestor=${id} -q);
-  if [[ -n "$(echo ${exited_containers})" ]]
+  if [[ -n "$(echo ${exited_containers})" ]]; then
     docker rm ${exited_containers}
   fi
 
