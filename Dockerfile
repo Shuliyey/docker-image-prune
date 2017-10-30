@@ -2,7 +2,7 @@ FROM docker
 MAINTAINER Zeyu Ye <shuliyey@gmail.com>
 
 # install dev tools
-RUN apk add --update tar gzip wget bash \
+RUN apk add --update tar gzip wget bash tzdata \
   && wget --no-check-certificate -O /tmp/go-cron.tar.gz https://github.com/michaloo/go-cron/releases/download/v0.0.2/go-cron.tar.gz \
   && tar xvf /tmp/go-cron.tar.gz -C /usr/bin \
   && apk del wget \
